@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Crypto Currencies
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,25 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Crypto</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ul>
+    <li [routerLink] = "['/bitcoin']" routerDirection = "forward">Bitcoin</li>
+    <li [routerLink] = "['/ethereum']" routerDirection = "forward">Ethereum</li>
+    <li [routerLink] = "['/binance']" routerDirection = "forward">Binance Coin</li>
+    <li [routerLink] = "['/xrp']" routerDirection = "forward">XRP</li>
+    <li [routerLink] = "['/doge']" routerDirection = "forward">DOGE</li>
+  </ul>
+
+  <h6>Flashlight</h6>
+  <ion-button (click) = "Flashlight()">Flashlight</ion-button>
+
+  <hr>
+
+  <h6>GPS</h6>
+  <ion-button (click) = "GPS()">GPS</ion-button>
+  <br>
+  {{lat}} {{long}}
 </ion-content>
